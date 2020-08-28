@@ -68,13 +68,6 @@ void loop() {
   SilentRunning.update();
 
   // These Joystick buttons should act as toggles and remain constantly ON/OFF
-  
-  /*if (CargoScoop.read() == 0) {
-    Joystick.button(4, 1);
-  }
-  else if (CargoScoop.read() == 1){
-    Joystick.button(4, 0);
-  }*/
   Joystick.button(4, !CargoScoop.read());
   Joystick.button(10, SilentRunning.read());
 
